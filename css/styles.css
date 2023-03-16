@@ -598,6 +598,7 @@ body {
   outline: transparent;
   background-color: transparent;
   padding-left: 38px;
+  transition: border-color var(--transition);
 }
 .modal-input:focus {
   border-color: var(--modal-icons-focus);
@@ -614,6 +615,7 @@ body {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill var(--transition);
 }
 .input-text {
   font-size: 12px;
@@ -648,6 +650,7 @@ body {
   border: 1px solid #2e2f42;
   border-radius: 2px;
   margin-right: 8px;
+  transition: border-color var(--transition);
 }
 .input-check:checked + .check-text::before {
   background-color: #404bbf;
@@ -677,6 +680,7 @@ body {
   border-radius: 4px;
   margin-top: 24px;
   margin-bottom: 24px;
+  transition: background-color var(--transition), cursor var(--transition);
 }
 .modal-send:is(:hover, :focus) {
   background-color: #404bbf;
