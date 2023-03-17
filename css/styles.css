@@ -648,6 +648,7 @@ body {
   outline: transparent;
   background-color: transparent;
   resize: none;
+  transition: border-color var(--transition);
 }
 .modal-textarea:focus {
   border-color: var(--modal-icons-focus);
