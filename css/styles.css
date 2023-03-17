@@ -409,7 +409,7 @@ body {
 .subscribe-input {
   min-width: 264px;
   height: 40px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--primary-white-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: var(--primary-white-color);
@@ -417,6 +417,15 @@ body {
   background-color: transparent;
   margin-right: 24px;
   padding: 8px 16px;
+}
+.subscribe-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  color: var(--primary-white-color);
 }
 .subscribe-btn {
   font-weight: 500;
@@ -548,8 +557,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
   width: 408px;
-  min-height: 576px;
-  padding: 24px 24px 0 24px;
+  height: 584px;
+  padding: 24px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -618,6 +627,7 @@ body {
   transition: fill var(--transition);
 }
 .input-text {
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -625,6 +635,7 @@ body {
   margin-bottom: 4px;
 }
 .modal-textarea {
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -637,6 +648,9 @@ body {
   outline: transparent;
   background-color: transparent;
   resize: none;
+}
+.modal-textarea:focus {
+  border-color: var(--modal-icons-focus);
 }
 .check-text {
   font-size: 12px;
@@ -661,13 +675,14 @@ body {
   border: none;
   background-image: url(../images/checked.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 .input-check:focus + .check-text::before {
   border-color: #404bbf;
 }
 .check-link {
   margin-left: 4px;
+  color: var(--modal-icons-focus);
 }
 .modal-send {
   font-weight: 500;
@@ -683,7 +698,6 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-top: 24px;
-  margin-bottom: 24px;
   transition: background-color var(--transition), cursor var(--transition);
 }
 .modal-send:is(:hover, :focus) {
