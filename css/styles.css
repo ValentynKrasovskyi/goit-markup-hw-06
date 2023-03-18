@@ -253,7 +253,8 @@ body {
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 72px;
 }
 .team-item {
   background-color: var(--primary-white-color);
